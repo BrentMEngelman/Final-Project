@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simplified Movies API ref</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="./assets/fes-logo.png"
+          alt=""
+          class="logo__img"
+          width="50px"
+        />
+        <div class="logo__title"><span>Simplified</span> Flix</div>
+      </div>
+      <form class="search-form" id="searchForm">
+        <input
+          class="search-form__input"
+          type="text"
+          id="searchInput"
+          placeholder="Search movie..."
+          required
+        />
+        <div class="search-form__actions">
+          <select id="typeFilter">
+            <option value="">All Types</option>
+          </select>
+          <button
+            id="searchBtn"
+            class="search-form__button"
+            type="submit"
+            aria-label="Search"
+          >Search</button>
+        </div>
+      </form>
+    </nav>
+    <main>
+      <div class="controls">
+          <p id="resultsInfo" class="resultsInfo">
+              <span>Showing: </span>
+              <span id="SearchValue"></span>  
+          </p>
+
+          <select id="sortSelect">
+            <option value="a-z">A to Z</option>
+            <option value="z-a">Z to A</option>
+            <option value="newest">Newest to Oldest</option>
+            <option value="oldest">Oldest to Newest</option>
+          </select>
+        </div>
+        <div id="moviesGrid" class="movies-grid"></div>
+        <div id="pagination" class="pagination"></div>
+    </main>
+    <footer>
+      <p>Created by Simplified.org. Powered by OMDBapi.</p>
+    </footer>
+  </body>
+</html>
